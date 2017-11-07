@@ -1,3 +1,5 @@
+//Version 0.0.1
+
 /* crear primer evento de click en el parrafo 
 con id"añadir", lo que hará será crear un 
 input text y un buttom */ 
@@ -20,6 +22,38 @@ function mostrarFormulario(){
 	divContenedor.classList.add("primer-div"); 
 };
 
+//Version 0.0.2
+
 /* ahora hay que crear una funcion que tome el mensaje del input y 
 lo añada como titulo a un nuevo div "nombre de la lista" y un mensaje 
 que pueda pinchar (EVENTO) y me muestre un formulario y un boton */  
+
+function crearTarjeta(event){
+	var contenedor=document.getElementById("contenedor-formulario");
+	contenedor.classList.add("noShow"); 
+	var nuevoDiv=document.getElementById("nuevo-cuadro"); 
+	nuevoDiv.classList.remove("noShow")
+	nuevoDiv.classList.add("show"); 
+	var cardName= document.getElementById('primerInput').value;
+	//creando nodo de texto 
+	var txtTitle=document.createTextNode(cardName); 
+	// creando titulo 
+	var title=document.createElement("h3"); 
+	var titleCuadro=document.getElementById("titleCuadro"); 
+	var nuevoCuadro=document.getElementById("nuevo-cuadro");
+	var añadirTarea=document.getElementById("añadirTarea");
+
+	//pasando los hijos 
+	title.appendChild(txtTitle); 
+	titleCuadro.appendChild(title);
+	nuevoCuadro.appendChild(titleCuadro); 
+
+	nuevoCuadro.insertBefore(titleCuadro, añadirTarea);
+
+}
+
+//creando evento al click del boton guardar 
+
+var btnSave=document.getElementById("saveButton"); 
+btnSave.addEventListener("click", function(){crearTarjeta()}); 
+
