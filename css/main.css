@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header{
+	height: 70px;
+	width: 100%;
+	background: #2E37EC; 
+}
+
+.navClass{
+	outline: 2px solid white;
+	width: 220px;
+	height: 40px;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+header div p{
+	display: inline;
+}
+
+.fa{
+	color: white;
+}
+
+.principal{
+	outline: 2px solid red;
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+	position: relative;
+	margin-left: 100px;
+}
+
+.iconsNav{
+	display: inline-block;
+	outline: 2px solid white;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 20px;
+	margin-left: 20px;
+
+}
+
+.rightFloat{
+	float: right;
+	margin-right: 100px;
+}
+
+.principalDiv{
+	background: #1087C8; 
+	height: 800px;
+	width: 100%;
+}
+
+.menu{
+	display: inline-block;
+}
+
+
+#añade{
+	outline: 2px solid white; 
+	margin-top: 50px;
+	margin-left: 50px;
+	height: 70px; 
+	width: 250px;
+	background: green; 
+	border-style: none;
+	border-color: green;
+
+}
+
+#añade:hover{
+	background: #9BEC99; 
+	color: white; 
+	cursor: pointer;
+	font-size: 16px;
+}
+
+/* clases js*/ 
+
+.noShow{
+	display: none;
+}
+.show{
+	display: inline-block;
+}
