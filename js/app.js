@@ -22,4 +22,4 @@ function mostrarFormulario(){
 
 /* ahora hay que crear una funcion que tome el mensaje del input y 
 lo añada como titulo a un nuevo div "nombre de la lista" y un mensaje 
-que pueda pinchar y que me aparezca el formulario 
+que pueda pinchar (EVENTO) y me muestre un formulario y un boton */  
