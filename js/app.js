@@ -55,5 +55,31 @@ function crearTarjeta(event){
 //creando evento al click del boton guardar 
 
 var btnSave=document.getElementById("saveButton"); 
-btnSave.addEventListener("click", function(){crearTarjeta()}); 
+btnSave.addEventListener("click", function(){crearTarjeta()});
+
+/*creando evento. Al realizar click en el mensaje "añadir una tarea"
+se despliegue un text Area y se cree un boton. */
+
+function nuevoTextArea(){
+	var newTextArea=document.createElement("textarea");
+	newTextArea.classList.add("textAreaTarea"); 
+	/*newTextArea.type="textarea" ; */
+	var newBtn=document.createElement("BUTTON");
+	var txtButton=document.createTextNode("Añadir"); 
+	newBtn.classList.add("btnAñadir");  
+	//llamando al elemento padre contenedor 
+	var contenedor=document.getElementById("nuevo-cuadro"); 
+	//borrando elementos 
+	var anadirTarea=document.getElementById("añadirTarea");
+	contenedor.removeChild(anadirTarea); 
+	// agregando hijos
+	newBtn.appendChild(txtButton); 
+	contenedor.appendChild(newTextArea); 
+	contenedor.appendChild(newBtn); 
+
+}; 
+
+var mensajeAgregar= document.getElementById("añadirTarea"); 
+mensajeAgregar.addEventListener('click', function(){nuevoTextArea()});
+
 
