@@ -66,8 +66,6 @@ function crearTarjeta(event){
 	nuevoCuadro.insertBefore(titleCuadro, añadirTarea);
 
 
-	//paralelamente se tiene que crear un div 
-
 
 }
 
