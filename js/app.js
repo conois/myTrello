@@ -41,7 +41,6 @@ function crearTarjeta(event){
 	//dando clase al nuevo cuadro 
 	newform.classList.add("newForm"); 
 
-
 	//creando input de textArea 
 	var contenedor=document.getElementById("contenedor-formulario");
 	contenedor.classList.add("noShow"); 
@@ -64,9 +63,6 @@ function crearTarjeta(event){
 	nuevoCuadro.appendChild(titleCuadro); 
 
 	nuevoCuadro.insertBefore(titleCuadro, añadirTarea);
-
-
-
 }
 
 //creando evento al click del boton guardar 
@@ -120,4 +116,3 @@ function nuevaTarea(){
 		padreTarea.insertBefore(nuevaTarea,cajatextarea);
 
 	};	
-
