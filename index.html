@@ -8,46 +8,51 @@
 </head>
 <body>
 	<header>
+		<div class="navClass">
+			<i class="fa fa-trello" aria-hidden="true"></i>
+			<p>Tableros</p>
+		</div>
+		<div class="navClass">
+			<input type="text" name="search" id="searchInput">
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
 
-		<div class="navClass"><i class="fa fa-trello" aria-hidden="true"></i><p>Tableros</p></div>
-		<div class="navClass"><p><input type="text" class="searchInput" name="search"><i class="fa fa-search" aria-hidden="true"></i></p></div>
-		<div class="principal"><i class="fa fa-trello" aria-hidden="true"></i><p>Trello</p></div>
-
-		<div class="navClass rightFloat" >
-			<div class="iconsNav"><i class="fa fa-plus" aria-hidden="true"></i></div>
-			<div class="iconsNav"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-			<div class="iconsNav"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
-			<div class="iconsNav"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+		<div class="navClass principal"> </div>
+		<div class="rightFloat">
+			<div class="navClass final"><i class="fa fa-plus" aria-hidden="true"></i></div>
+			<div class="navClass final"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+			<div class="navClass final"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
 		</div>
 	</header>
 
-	<section>
+	<section >
 		<div class="principalDiv">
 
-		<div class="menu"><h2>Tablero - Reto de Codigo</h2><i class="fa fa-star-o" aria-hidden="true"></i> <p class="menu"><i class="fa fa-lock" aria-hidden="true"></i> Privado </p></div>
+			<div class="menu">
+			<h2>Tablero - Reto de Codigo</h2>
+			<p><i class="fa fa-star-o" aria-hidden="true"></i></p>
+			<p class="menu"><i class="fa fa-lock" aria-hidden="true"></i> Privado </p>
+			</div>
 		
-		<!-- div de contenido dinamico -->
+			<!-- div de contenido dinamico -->
 
-		<div id="contenedor-formulario">
-			<button id="añade" >Añade una tarjeta</button>
+			<div id="contenedor-formulario">
+				<button id="añade" >Añade una tarjeta ... <span class=""></span></button>
 
-			<form id="form" class="noShow" action="javascript:void(0)" >
+				<form id="form" class="noShow" action="javascript:void(0)" >
 				
-				<input type="text" name="formulario-lista" id="primerInput" placeholder="Agrega una tarjeta"> 
+					<input type="text" name="formulario-lista" id="primerInput" placeholder=" Agrega una Lista"> 
 
-				<button id="saveButton">Guardar</button>
-			</form>
+					<button id="saveButton">Guardar</button>
+				</form>
 
-		</div>
+			</div>
 
-		<div id="nuevo-cuadro" class="primer-div noShow">
-			<p id="titleCuadro"></p>
-			<p id="añadirTarea">Añadir una tarea </p>
-		</div>
+			<div id="nuevo-cuadro" class="primer-div noShow">
+				<p id="titleCuadro"></p>
+				<p id="añadirTarea">Añadir una tarea </p>
+			</div>
 
-		
-			
-		
 		</div>
 	</section>
 

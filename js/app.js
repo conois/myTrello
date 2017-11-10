@@ -29,12 +29,27 @@ lo añada como titulo a un nuevo div "nombre de la lista" y un mensaje
 que pueda pinchar (EVENTO) y me muestre un formulario y un boton */  
 
 function crearTarjeta(event){
+	// crear nuevo cuadro
+	var form=document.getElementById('form'); 
+
+	var principalDiv=document.getElementsByClassName('principalDiv')[0]; 
+	var newform=document.createElement("div"); 
+
+	newform.appendChild(form); 
+	principalDiv.appendChild(newform); 
+
+	//dando clase al nuevo cuadro 
+	newform.classList.add("newForm"); 
+
+
+	//creando input de textArea 
 	var contenedor=document.getElementById("contenedor-formulario");
 	contenedor.classList.add("noShow"); 
 	var nuevoDiv=document.getElementById("nuevo-cuadro"); 
 	nuevoDiv.classList.remove("noShow")
 	nuevoDiv.classList.add("show"); 
 	var cardName= document.getElementById('primerInput').value;
+	document.getElementById('primerInput').value="";
 	//creando nodo de texto 
 	var txtTitle=document.createTextNode(cardName); 
 	// creando titulo 
@@ -50,6 +65,10 @@ function crearTarjeta(event){
 
 	nuevoCuadro.insertBefore(titleCuadro, añadirTarea);
 
+
+	//paralelamente se tiene que crear un div 
+
+
 }
 
 //creando evento al click del boton guardar 
@@ -63,10 +82,13 @@ se despliegue un text Area y se cree un boton. */
 function nuevoTextArea(){
 	var newTextArea=document.createElement("textarea");
 	newTextArea.classList.add("textAreaTarea"); 
+	newTextArea.setAttribute("id","tareaPorHacer");
 	/*newTextArea.type="textarea" ; */
 	var newBtn=document.createElement("BUTTON");
 	var txtButton=document.createTextNode("Añadir"); 
-	newBtn.classList.add("btnAñadir");  
+	newBtn.classList.add("btnAñadir"); 
+	newBtn.setAttribute("id", "botonAnadir");
+	newBtn.setAttribute("onclick", "nuevaTarea()");
 	//llamando al elemento padre contenedor 
 	var contenedor=document.getElementById("nuevo-cuadro"); 
 	//borrando elementos 
@@ -79,7 +101,25 @@ function nuevoTextArea(){
 
 }; 
 
+
 var mensajeAgregar= document.getElementById("añadirTarea"); 
 mensajeAgregar.addEventListener('click', function(){nuevoTextArea()});
 
+
+//nueva tarea 
+function nuevaTarea(){
+		var nuevaTarea=document.createElement("p"); 
+		var txtNuevaTarea=document.getElementById("tareaPorHacer").value; 
+		document.getElementById("tareaPorHacer").value="";
+		var nodoTarea=document.createTextNode(txtNuevaTarea); 
+		var padreTarea=document.getElementById("nuevo-cuadro"); 
+		var cajatextarea= document.getElementById("tareaPorHacer"); 
+//agregando estilo
+		nuevaTarea.classList.add("nuevaTarea");
+		nuevaTarea.appendChild(nodoTarea); 
+		padreTarea.appendChild(nuevaTarea);
+
+		padreTarea.insertBefore(nuevaTarea,cajatextarea);
+
+	};	
 
